@@ -13,7 +13,7 @@ class Congreso extends Model
     protected $table = 'congresos';
 
     protected $fillable = [
-        'congress_title', 'congress_description', 'congress_date'
+        'congress_title', 'congress_description', 'congress_date', 'user_id'
     ];
 
     protected $hidden = [

@@ -28,7 +28,8 @@ class CongresoController extends Controller
         $validator = Validator::make($req->all(), [
             'congress_title' => 'required|string|max:255',
             'congress_description' => 'required|string|max:255',
-            'congress_date' => 'required|date'
+            'congress_date' => 'required|date',
+            'user_id' => 'required|numeric|exists:users,id',
         ]);
 
         if ($validator->fails()) {

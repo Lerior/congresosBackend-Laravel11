@@ -27,7 +27,7 @@ class AuthController extends Controller
             'user' => $user->user_app
         ], $secretKey);
         //ya se esta enviando en data... checar frontend
-        $user_app = JWT::get_data($token, $secretKey)['user'];
-        return response()->json(['token' => $token, 'user' => $user_app]);
+        $id = JWT::get_data($token, $secretKey)['id'];
+        return response()->json(['token' => $token, 'user' => $id]);
     }
 }
